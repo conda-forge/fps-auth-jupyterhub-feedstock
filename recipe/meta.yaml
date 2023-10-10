@@ -1,5 +1,5 @@
 {% set name = "fps-auth-jupyterhub" %}
-{% set version = "0.2.5" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/fps_auth_jupyterhub-{{ version }}.tar.gz
-  sha256: 777026998d99a2fcbcd5a6f400c0dd134e7a57118dea46e5db9f7eb57f34ea65
+  sha256: 1ad3369b41125f46bd7c9f4279639be917adc9362c88e7c6cc518eb18b405fd5
 
 build:
   noarch: python
