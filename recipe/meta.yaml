@@ -21,8 +21,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.1.4,<1
-    - asphalt-sqlalchemy >=5.0.1,<6
+    - jupyverse-api >=0.7.0,<1
+    - anyio
     - httpx >=0.24.1,<1
     - jupyterhub >=4.0.1,<5
 
