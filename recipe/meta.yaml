@@ -1,5 +1,5 @@
 {% set name = "fps-auth-jupyterhub" %}
-{% set version = "0.6.4" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_auth_jupyterhub-{{ version }}.tar.gz
-  sha256: f4529a3c33603b1641b587a9a04e20bba316784c75cae2602c7a19a104b97ab0
+  sha256: 0c72619bff12568724b3325e7a43670fc82b49a2584c6aa95be051301da05811
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
@@ -21,8 +21,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.1.4,<1
-    - asphalt-sqlalchemy >=5.0.1,<6
+    - jupyverse-api >=0.7.0,<1
+    - anyio
     - httpx >=0.24.1,<1
     - jupyterhub >=4.0.1,<5
 
