@@ -23,6 +23,7 @@ requirements:
     - python >={{ python_min }}
     - jupyverse-api >=0.7.0,<1
     - anyio
+    - aiosqlite
     - httpx >=0.24.1,<1
     - jupyterhub >=4.0.1,<5
 
