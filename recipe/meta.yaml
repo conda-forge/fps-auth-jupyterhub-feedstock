@@ -1,5 +1,5 @@
 {% set name = "fps-auth-jupyterhub" %}
-{% set version = "0.8.0" %}
+{% set version = "0.8.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fps_auth_jupyterhub-{{ version }}.tar.gz
-  sha256: 063e7bb8fae563e8f08ebbd204dee6c067b7c9b6ad0005c2c3861cb6679358bb
+  sha256: df48636d2329b3e89ae485f2ae2df7cfa5fefb625e9818f31989cb926447a6ff
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.8.0,<0.9.0
+    - jupyverse-api >=0.9.0,<0.10.0
     - anyio
     - aiosqlite
     - httpx >=0.24.1,<1
