@@ -30,6 +30,7 @@ requirements:
 test:
   requires:
     - python {{ python_min }}
+    - rich-click
   imports:
     - fps_auth_jupyterhub
 
