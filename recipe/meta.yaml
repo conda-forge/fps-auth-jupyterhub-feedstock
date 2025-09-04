@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - jupyverse-api >=0.11.0,<0.12.0
+    - jupyverse-api >=0.12.0,<0.13.0
     - anyio
     - aiosqlite
     - httpx >=0.24.1,<1
@@ -31,6 +31,9 @@ test:
   requires:
     - python {{ python_min }}
     - rich-click
+    - pip
+  commands:
+    - pip check
   imports:
     - fps_auth_jupyterhub
 
