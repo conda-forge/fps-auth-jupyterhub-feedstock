@@ -33,6 +33,9 @@ tests:
       imports: fps_auth_jupyterhub
       pip_check: true
       python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - rich-click
 
 about:
   license: BSD-3-Clause
