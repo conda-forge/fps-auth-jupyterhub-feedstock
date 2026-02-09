@@ -1,0 +1,51 @@
+schema_version: 1
+
+context:
+  version: "0.9.9"
+
+package:
+  name: fps-auth-jupyterhub
+  version: ${{ version }}
+
+source:
+  - url: https://pypi.org/packages/source/f/fps-auth-jupyterhub/fps_auth_jupyterhub-${{ version }}.tar.gz
+    sha256: 19884fa85b7a2a65b79451f38c88f29fd5f456d5acaeed504b1cfec6633b27fd
+
+build:
+  noarch: python
+  number: 0
+  script:
+    - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - pip
+    - uv-build
+  run:
+    - python >=${{ python_min }}
+    - jupyverse-api >=0.14.0,<0.15.0
+    - aiosqlite <0.22.0
+    - jupyterhub >=4.0.1,<5
+
+tests:
+  - python:
+      imports:
+        - fps_auth_jupyterhub
+  - requirements:
+      run:
+        - python ${{ python_min }}
+        - rich-click
+        - pip
+    script:
+      - pip check
+
+about:
+  license: BSD-3-Clause
+  license_file: COPYING.md
+  homepage: https://github.com/jupyter-server/jupyverse/tree/main/plugins/auth_jupyterhub
+  summary: An FPS plugin for the authentication API, using JupyterHub.
+
+extra:
+  recipe-maintainers:
+    - davidbrochart
