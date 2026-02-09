@@ -27,14 +27,14 @@ requirements:
     - jupyverse-api >=0.14.0,<0.15.0
     - aiosqlite <0.22.0
     - jupyterhub >=4.0.1,<5
+  test:
+    - rich-click
 
 tests:
   - python:
       imports: fps_auth_jupyterhub
       pip_check: true
       python_version: ${{ python_min }}.*
-      requires:
-        - rich-click
 
 about:
   license: BSD-3-Clause
