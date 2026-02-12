@@ -29,9 +29,6 @@ requirements:
     - jupyterhub >=4.0.1,<5
 
 tests:
-  - python:
-      imports:
-        - fps_auth_jupyterhub
   - requirements:
       run:
         - python ${{ python_min }}.*
@@ -39,6 +36,7 @@ tests:
         - pip
     script:
       - pip check
+      - python -c "import fps_auth_jupyterhub"
 
 about:
   license: BSD-3-Clause
