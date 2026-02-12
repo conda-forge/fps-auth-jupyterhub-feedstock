@@ -34,7 +34,7 @@ tests:
         - fps_auth_jupyterhub
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         - rich-click
         - pip
     script:
