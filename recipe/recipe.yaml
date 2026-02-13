@@ -29,16 +29,14 @@ requirements:
     - jupyterhub >=4.0.1,<5
 
 tests:
-  - python:
-      imports:
-        - fps_auth_jupyterhub
   - requirements:
       run:
-        - python ${{ python_min }}
+        - python ${{ python_min }}.*
         - rich-click
         - pip
     script:
       - pip check
+      - python -c "import fps_auth_jupyterhub"
 
 about:
   license: BSD-3-Clause
