@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.9.9"
+  version: "0.10.1"
 
 package:
   name: fps-auth-jupyterhub
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-auth-jupyterhub/fps_auth_jupyterhub-${{ version }}.tar.gz
-    sha256: 19884fa85b7a2a65b79451f38c88f29fd5f456d5acaeed504b1cfec6633b27fd
+    sha256: c6f398dae873ac0a1a540b8c53b9aa37d3645f34c1ede2fe4aa3b999775e9c71
 
 build:
   noarch: python
@@ -24,9 +24,16 @@ requirements:
     - uv-build
   run:
     - python >=${{ python_min }}
-    - jupyverse-api >=0.14.0,<0.15.0
     - aiosqlite <0.22.0
+    - anyio
+    - fastapi-core
+    - fps
+    - httpx
     - jupyterhub >=4.0.1,<5
+    - jupyverse-api >=0.15.0,<0.16.0
+    - jupyverse-auth >=0.2.0,<0.3.0
+    - pydantic
+    - sqlalchemy
 
 tests:
   - requirements:
