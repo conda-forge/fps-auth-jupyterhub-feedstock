@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "0.10.1"
+  version: "0.10.2"
 
 package:
   name: fps-auth-jupyterhub
@@ -9,7 +9,7 @@ package:
 
 source:
   - url: https://pypi.org/packages/source/f/fps-auth-jupyterhub/fps_auth_jupyterhub-${{ version }}.tar.gz
-    sha256: c6f398dae873ac0a1a540b8c53b9aa37d3645f34c1ede2fe4aa3b999775e9c71
+    sha256: a296e8bb4b49297a4b89ec9fbd0d24f6675718a727255e4de45d07ed59ed52c0
 
 build:
   noarch: python
